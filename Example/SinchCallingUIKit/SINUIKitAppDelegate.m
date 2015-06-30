@@ -7,12 +7,13 @@
 //
 
 #import "SINUIKitAppDelegate.h"
-
+#import <SinchCallingUIKit/SinchCallingUIKit.h>
 @implementation SINUIKitAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[CallingManager sharedManager] startClientWithKey:@"" secret:@"" userName:@"test" sandbox:YES launchOptions:launchOptions];
     return YES;
 }
 							

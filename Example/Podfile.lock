@@ -1,0 +1,22 @@
+PODS:
+  - SinchCallingUIKit (0.1.1):
+    - SinchRTC
+    - SinchService
+  - SinchRTC (3.5.1)
+  - SinchService (1.0.1):
+    - SinchService/SinchHeaders (= 1.0.1)
+  - SinchService/SinchHeaders (1.0.1)
+
+DEPENDENCIES:
+  - SinchCallingUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  SinchCallingUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SinchCallingUIKit: 6f682107b5b30bdc96bccf953e94ba4aede6cf30
+  SinchRTC: 60b691e6d9e05aa4d3364674765e622bee951578
+  SinchService: 28faab418cd13734dfe5a0ef77287b25399538b2
+
+COCOAPODS: 0.37.2

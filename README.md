@@ -1,13 +1,13 @@
 # SinchCallingUIKit
 
-[![CI Status](http://img.shields.io/travis/d/SinchCallingUIKit.svg?style=flat)](https://travis-ci.org/d/SinchCallingUIKit)
-[![Version](https://img.shields.io/cocoapods/v/SinchCallingUIKit.svg?style=flat)](http://cocoapods.org/pods/SinchCallingUIKit)
-[![License](https://img.shields.io/cocoapods/l/SinchCallingUIKit.svg?style=flat)](http://cocoapods.org/pods/SinchCallingUIKit)
-[![Platform](https://img.shields.io/cocoapods/p/SinchCallingUIKit.svg?style=flat)](http://cocoapods.org/pods/SinchCallingUIKit)
+<!--[![CI Status](http://img.shields.io/travis/d/SinchCallingUIKit.svg?style=flat)](https://travis-ci.org/d/SinchCallingUIKit)-->
+<!--[![Version](https://img.shields.io/cocoapods/v/SinchCallingUIKit.svg?style=flat)](http://cocoapods.org/pods/SinchCallingUIKit)-->
+<!--[![License](https://img.shields.io/cocoapods/l/SinchCallingUIKit.svg?style=flat)](http://cocoapods.org/pods/SinchCallingUIKit)-->
+<!--[![Platform](https://img.shields.io/cocoapods/p/SinchCallingUIKit.svg?style=flat)](http://cocoapods.org/pods/SinchCallingUIKit)-->
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+This is a pod that lets you add Sinch calling functionality with a callscreens in minutes, super for fast prototyping 
 
 ## Requirements
 
@@ -20,6 +20,7 @@ it, simply add the following line to your Podfile:
 pod "SinchCallingUIKit"
 ```
 
+ 
 ## Author
 
 d, christian.jensen@spaced.se

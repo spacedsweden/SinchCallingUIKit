@@ -7,7 +7,7 @@
 //
 
 #import "SINUIKitViewController.h"
-
+#import <SinchCallingUIKit/SinchCallingUIKit.h>
 @interface SINUIKitViewController ()
 
 @end
@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)call:(id)sender {
+    [[CallingManager sharedManager] callNumber:@"+15612600684"];
 }
 
 - (void)didReceiveMemoryWarning
