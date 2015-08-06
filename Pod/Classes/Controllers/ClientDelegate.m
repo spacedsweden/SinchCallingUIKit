@@ -7,7 +7,7 @@
 //
 
 #import "ClientDelegate.h"
-
+#import "ResourceLoader.h"
 @implementation ClientDelegate
 {
     id<SINAudioController> audioController;
@@ -19,10 +19,10 @@
 {
    
     
-//    if ([UIApplication sharedApplication].applicationState != UIApplicationStateBackground)
-//    {
-        NSBundle* bundle = [NSBundle bundleWithIdentifier:@"com.sinch.SinchCallingUIKit"];
-        CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:bundle];
+    if ([UIApplication sharedApplication].applicationState != UIApplicationStateBackground)
+    {
+       CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:[ResourceLoader loadBundle]];
+//        CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:bundle];
         vc.currentCall = call;
         call.delegate = vc;
 
@@ -31,9 +31,7 @@
         [[window rootViewController] presentViewController:vc animated:true completion:^{
             NSLog(@"presented");
         }];
-//    }
-  
-    
+    }
 }
 
 -(SINLocalNotification *)client:(id<SINCallClient>)client localNotificationForIncomingCall:(id<SINCall>)call
