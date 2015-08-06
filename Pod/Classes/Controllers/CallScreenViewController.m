@@ -21,7 +21,7 @@
 @end
 
 @implementation CallScreenViewController
-@synthesize currentCall, audioController, statusField, numberField, keybadButton, muteButton, speakerButton, answerButton, hangupConstraint;
+@synthesize currentCall= _currentCall, audioController, statusField, numberField, keybadButton, muteButton, speakerButton, answerButton, hangupConstraint;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,15 +33,20 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)hangup:(id)sender {
-    if (currentCall != nil)
-        [currentCall hangup];
+    if (_currentCall != nil)
+        [_currentCall hangup];
     
     
 }
 
+
+- (void)setCurrentCall:(id<SINCall>)call {
+    _currentCall = call;
+    _currentCall.delegate = self;
+}
 -(IBAction)answer:(id)sender
 {
-    [currentCall answer];
+    [_currentCall answer];
     [self.view layoutIfNeeded];
     
     self.hangupConstraint.constant = 0;
@@ -66,8 +71,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.numberField.text = [currentCall remoteUserId];
-    if ([currentCall direction] == SINCallDirectionOutgoing)
+    self.numberField.text = [_currentCall remoteUserId];
+    if ([_currentCall direction] == SINCallDirectionOutgoing)
     {
         self.answerButton.hidden = YES;
         self.hangupConstraint.constant = 0;
@@ -170,7 +175,7 @@
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    [currentCall sendDTMF:string];
+    [_currentCall sendDTMF:string];
     return NO;
 }
 

@@ -80,6 +80,7 @@
 
 - (void)service:(id<SINService>)service didFailWithError:(NSError *)error
 {
+    NSLog(@"service did fail %@", error);
 }
 
 - (void)service:(id<SINService>)service
@@ -88,14 +89,15 @@
        severity:(SINLogSeverity)severity
       timestamp:(NSDate *)timestamp;
 {
-    NSLog(@"%@", message);
+    if (self.debugLog || severity == SINLogSeverityCritical)
+        NSLog(@"%@", message);
 }
 
 /// public Methods
 -(void)startClientWithKey:(NSString*)appKey secret:(NSString*)secret userName:(NSString*)userName sandbox:(bool)sandbox launchOptions:(NSDictionary*)launchOptions
 {
     
-    NSString* url = sandbox ? @"sandbox.sinch.com" : @"sandbox.sinch.com";
+    NSString* url = sandbox ? @"sandbox.sinch.com" : @"clientapi.sinch.com";
     id config = [[SinchService configWithApplicationKey:appKey
                                       applicationSecret:secret
                                         environmentHost:url]
@@ -106,6 +108,8 @@
     service.callClient.delegate = callClientDelegate;
     [service logInUserWithId:userName];
     [service.push registerUserNotificationSettings];
+    
 }
+
 
 @end

@@ -1,16 +1,16 @@
 {
   "name": "SinchCallingUIKit",
-  "version": "0.1.1",
-  "summary": "A short description of SinchCallingUIKit.",
-  "description": "                       An optional longer description of SinchCallingUIKit\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SinchCallingUIKit",
+  "version": "0.1.3",
+  "summary": "A UI framework to help you build calling apps super quick",
+  "description": "Use this add calling to your app in minutes, includes a ios8 like calling screen to help you build quick prototypes.",
+  "homepage": "https://github.com/spacedsweden/SinchCallingUIKit",
   "license": "MIT",
   "authors": {
     "d": "christian@sinch.com"
   },
   "source": {
     "git": "https://github.com/sinch/SinchCallingUIKit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.1"

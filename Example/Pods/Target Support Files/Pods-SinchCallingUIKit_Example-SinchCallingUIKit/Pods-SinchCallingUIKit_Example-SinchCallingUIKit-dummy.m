@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_SinchCallingUIKit_Example_SinchCallingUIKit : NSObject
-@end
-@implementation PodsDummy_Pods_SinchCallingUIKit_Example_SinchCallingUIKit
-@end

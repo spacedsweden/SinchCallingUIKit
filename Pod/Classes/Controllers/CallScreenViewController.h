@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Sinch/Sinch.h>
 @interface CallScreenViewController : UIViewController <SINCallDelegate, UITextFieldDelegate>
-@property id<SINCall> currentCall;
-@property id<SINAudioController> audioController;
+@property (nonatomic, readwrite, strong) id<SINCall> currentCall;
+@property (nonatomic, readwrite, strong) id<SINAudioController> audioController;
 @property (weak, nonatomic) IBOutlet UILabel *statusField;
 @property (weak, nonatomic) IBOutlet UILabel *numberField;
 

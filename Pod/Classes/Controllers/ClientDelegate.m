@@ -23,8 +23,9 @@
 //    {
         NSBundle* bundle = [NSBundle bundleWithIdentifier:@"com.sinch.SinchCallingUIKit"];
         CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:bundle];
-        call.delegate = vc;
         vc.currentCall = call;
+        call.delegate = vc;
+
         vc.audioController = audioController;
         UIWindow* window  = [[[UIApplication sharedApplication] delegate] window];
         [[window rootViewController] presentViewController:vc animated:true completion:^{
