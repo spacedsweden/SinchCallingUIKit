@@ -24,6 +24,7 @@
    
        CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:[ResourceLoader loadBundle]];
         vc.currentCall = call;
+        [[CallingManager sharedManager] saveLastCall:call];
         call.delegate = vc;
 
         vc.audioController = [self getAudio];
@@ -36,11 +37,12 @@
 
 -(SINLocalNotification *)client:(id<SINCallClient>)client localNotificationForIncomingCall:(id<SINCall>)call
 {
+    [[CallingManager sharedManager] saveLastCall:call];
           SINLocalNotification *notification = [[SINLocalNotification alloc] init];
         notification.alertAction = @"Answer";
         notification.alertBody = [NSString stringWithFormat:@"Incoming call from %@", [call remoteUserId]];
     notification.soundName = @"incoming.wav";
-        return notification;
+    return notification;
 }
 
 

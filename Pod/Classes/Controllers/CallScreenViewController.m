@@ -46,6 +46,7 @@
 }
 -(IBAction)answer:(id)sender
 {
+    [[self audioController] stopPlayingSoundFile];
     [_currentCall answer];
     [self.view layoutIfNeeded];
     

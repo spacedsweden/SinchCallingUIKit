@@ -15,6 +15,9 @@
 @interface CallingManager : NSObject
 + (CallingManager*)sharedManager;
 @property bool debugLog;
+-(id<SINCall>)lastIncomingPhoneCall;
+
+-(void)saveLastCall:(id<SINCall>)call;
 
 -(id<SINAudioController>)getAudio;
 -(void)startClientWithKey:(NSString*)appKey secret:(NSString*)secret userName:(NSString*)userName sandbox:(bool)sandbox launchOptions:(NSDictionary*)launchOptions;

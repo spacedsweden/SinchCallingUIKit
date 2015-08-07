@@ -7,7 +7,7 @@
 
 ## Usage
 
-This is a pod that lets you add Sinch calling functionality with a callscreens in minutes, super for fast prototyping 
+This is a pod that lets you add Sinch calling functionality with a callscreens in minutes, super for fast prototyping. If you want to remote/local push to play a custom sound, place a file called ringback.wav in your *mainbundle* (yeah I know its apple)
 
 ## Requirements
 

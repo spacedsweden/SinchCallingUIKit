@@ -53,9 +53,30 @@
     
     
 }
+
+-(id<SINCall>)lastIncomingPhoneCall;
+{
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [[defaults stringForKey:@"sin_lastCall"] dataUsingEncoding:NSUTF8StringEncoding];
+    id<SINCall> call = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    return call;
+    
+}
+-(void)saveLastCall:(id<SINCall>)call
+{
+
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSData* data = [NSJSONSerialization dataWithJSONObject:call options:NSJSONWritingPrettyPrinted error:nil];
+    NSString* stringData= [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    [defaults setValue:stringData  forKey:@"sin_lastCall"];
+    [defaults synchronize];
+    
+    
+}
 -(void)callUser:(NSString*)userName
 {
     currentCall = [[service callClient] callUserWithId:userName];
+    [self saveLastCall:currentCall];
     [self showCallController];
 }
 -(id<SINAudioController>)getAudio
@@ -71,16 +92,18 @@
 //    }
     
     currentCall = [[service callClient] callPhoneNumber:phoneNumber];
+    [self saveLastCall:currentCall];
     [self showCallController];
     
 }
 
-- (SINLocalNotification *)client:(id<SINClient>)client localNotificationForIncomingCall:(id<SINCall>)call {
-    SINLocalNotification *notification = [[SINLocalNotification alloc] init];
-    notification.alertAction = @"Answer";
-    notification.alertBody = [NSString stringWithFormat:@"Incoming call from %@", [call remoteUserId]];
-    return notification;
-}
+//- (SINLocalNotification *)client:(id<SINClient>)client localNotificationForIncomingCall:(id<SINCall>)call {
+//    SINLocalNotification *notification = [[SINLocalNotification alloc] init];
+//    notification.alertAction = @"Answer";
+//    notification.alertBody = [NSString stringWithFormat:@"Incoming call from %@", [call remoteUserId]];
+//    [self saveLastCall:call];
+//    return notification;
+//}
 
 
 - (void)service:(id<SINService>)service didFailWithError:(NSError *)error
