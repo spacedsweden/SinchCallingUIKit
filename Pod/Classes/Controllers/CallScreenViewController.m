@@ -72,6 +72,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     self.numberField.text = [_currentCall remoteUserId];
+    self.audioController = [[CallingManager sharedManager] getAudio];
     if ([_currentCall direction] == SINCallDirectionOutgoing)
     {
         self.answerButton.hidden = YES;

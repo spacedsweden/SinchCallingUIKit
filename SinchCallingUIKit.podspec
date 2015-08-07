@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SinchCallingUIKit"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "A UI framework to help you build calling apps super quick"
   s.description      = "Use this add calling to your app in minutes, includes a ios8 like calling screen to help you build quick prototypes."
 s.homepage         = "https://github.com/spacedsweden/SinchCallingUIKit"

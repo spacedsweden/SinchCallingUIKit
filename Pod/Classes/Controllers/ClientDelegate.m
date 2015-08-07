@@ -18,11 +18,7 @@
 -(void)client:(id<SINCallClient>)client didReceiveIncomingCall:(id<SINCall>)call
 {
    
-    
-    if ([UIApplication sharedApplication].applicationState != UIApplicationStateBackground)
-    {
        CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:[ResourceLoader loadBundle]];
-//        CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:bundle];
         vc.currentCall = call;
         call.delegate = vc;
 
@@ -31,7 +27,7 @@
         [[window rootViewController] presentViewController:vc animated:true completion:^{
             NSLog(@"presented");
         }];
-    }
+//    }
 }
 
 -(SINLocalNotification *)client:(id<SINCallClient>)client localNotificationForIncomingCall:(id<SINCall>)call

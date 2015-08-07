@@ -42,8 +42,10 @@
     
     CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:[ResourceLoader loadBundle]];
     currentCall.delegate = vc;
+    
     vc.currentCall = currentCall;
     vc.audioController = [service audioController];
+
     UIWindow* window  = [[[UIApplication sharedApplication] delegate] window];
     [[window rootViewController] presentViewController:vc animated:true completion:^{
         NSLog(@"presented");
@@ -56,7 +58,10 @@
     currentCall = [[service callClient] callUserWithId:userName];
     [self showCallController];
 }
-
+-(id<SINAudioController>)getAudio
+{
+    return [service audioController];
+}
 -(void)callNumber:(NSString *)phoneNumber
 {
 //    if (![service isStarted])
@@ -104,10 +109,12 @@
                  pushNotificationsWithEnvironment:SINAPSEnvironmentAutomatic];
     service = [SinchService serviceWithConfig:config];
     service.delegate = self;
+    
     callClientDelegate= [[ClientDelegate alloc] init];
     service.callClient.delegate = callClientDelegate;
     [service logInUserWithId:userName];
     [service.push registerUserNotificationSettings];
+
     
 }
 

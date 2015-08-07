@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[CallingManager sharedManager] startClientWithKey:@"476a114d-1a85-448f-884a-cdd7cf7352ac" secret:@"PPxK5WN5cUmZ9lOa/gYqDA==" userName:@"cje12345" sandbox:NO launchOptions:launchOptions];
+    [[CallingManager sharedManager] startClientWithKey:@"" secret:@"" userName:@"" sandbox:NO launchOptions:launchOptions];
     return YES;
 }
 							
