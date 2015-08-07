@@ -39,7 +39,7 @@
           SINLocalNotification *notification = [[SINLocalNotification alloc] init];
         notification.alertAction = @"Answer";
         notification.alertBody = [NSString stringWithFormat:@"Incoming call from %@", [call remoteUserId]];
-    notification.soundName = [self pathForSound:@"incoming.wav"];
+    notification.soundName = @"incoming.wav";
         return notification;
 }
 
