@@ -8,12 +8,16 @@
 
 #import "ClientDelegate.h"
 #import "ResourceLoader.h"
+#import "CallingManager.h"
 @implementation ClientDelegate
 {
-    id<SINAudioController> audioController;
+
 }
 
-
+-(id<SINAudioController>)getAudio
+{
+    return [[CallingManager sharedManager] getAudio];
+}
 
 -(void)client:(id<SINCallClient>)client didReceiveIncomingCall:(id<SINCall>)call
 {
@@ -22,7 +26,7 @@
         vc.currentCall = call;
         call.delegate = vc;
 
-        vc.audioController = audioController;
+        vc.audioController = [self getAudio];
         UIWindow* window  = [[[UIApplication sharedApplication] delegate] window];
         [[window rootViewController] presentViewController:vc animated:true completion:^{
             NSLog(@"presented");
@@ -35,7 +39,15 @@
           SINLocalNotification *notification = [[SINLocalNotification alloc] init];
         notification.alertAction = @"Answer";
         notification.alertBody = [NSString stringWithFormat:@"Incoming call from %@", [call remoteUserId]];
-    notification.soundName = @"incoming.wav";
+    notification.soundName = [self pathForSound:@"incoming.wav"];
         return notification;
 }
+
+
+- (NSString *)pathForSound:(NSString *)soundName {
+    
+    
+    return [[[ResourceLoader loadBundle] resourcePath] stringByAppendingPathComponent:soundName];
+}
+
 @end
