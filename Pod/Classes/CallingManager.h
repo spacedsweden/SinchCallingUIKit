@@ -15,7 +15,7 @@
 @interface CallingManager : NSObject
 + (CallingManager*)sharedManager;
 @property bool debugLog;
--(id<SINCall>)lastIncomingPhoneCall;
+-(NSString*)lastIncomingPhoneCall;
 
 -(void)saveLastCall:(id<SINCall>)call;
 

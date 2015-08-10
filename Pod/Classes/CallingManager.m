@@ -54,26 +54,16 @@
     
 }
 
--(id<SINCall>)lastIncomingPhoneCall;
+-(NSString*)lastIncomingPhoneCall;
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    NSData *data = [[defaults stringForKey:@"sin_lastCall"] dataUsingEncoding:NSUTF8StringEncoding];
-    if (data != nil)
-    {
-        id<SINCall> call = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        return call;
-    }
-    return nil;
-        
-    
-    
+    return [defaults stringForKey:@"sin_lastCall"];
 }
 -(void)saveLastCall:(id<SINCall>)call
 {
 
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    NSData* data = [NSJSONSerialization dataWithJSONObject:call options:NSJSONWritingPrettyPrinted error:nil];
-    NSString* stringData= [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString* stringData= call.remoteUserId;
     [defaults setValue:stringData  forKey:@"sin_lastCall"];
     [defaults synchronize];
     
