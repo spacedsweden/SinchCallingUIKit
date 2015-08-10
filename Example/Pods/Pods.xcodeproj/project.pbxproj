@@ -25,7 +25,7 @@
 		2BDFCABB4EB74E614640764550DD1E9E /* keypad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DA36659E45FC737DE685442664F25 /* keypad.png */; };
 		43F16585803C0F3E2F9095A2C1A0A33C /* SINAudioController.h in Headers */ = {isa = PBXBuildFile; fileRef = 11D87A5BE624194C087DC1722A9BA96D /* SINAudioController.h */; };
 		45AF588411B3F0764D97C4EE40874CE9 /* Sinch.h in Headers */ = {isa = PBXBuildFile; fileRef = A7DFF5165C950DFB5BFA71E170D4D07D /* Sinch.h */; };
-		49D46621F38A1DEBAA2DB1F45750F8E4 /* CallingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD91ED6EFD211C802A7AF8F6E085E23D /* CallingManager.h */; };
+		49D46621F38A1DEBAA2DB1F45750F8E4 /* CallingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD91ED6EFD211C802A7AF8F6E085E23D /* CallingManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DB7F8DFB349BD08A1CF5779588A2871 /* SINSLazyCallClient.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2DE7694568AAF14A87787016375056 /* SINSLazyCallClient.h */; };
 		4E20516BD257ABADBCF7E2AA0D2BF9C4 /* SINSLazyCallClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A92E9F35D7B3E8BAD47A8ABE4ECCD570 /* SINSLazyCallClient.m */; };
 		53C49C5ADB24A8607ED2DAC2F86C7ADA /* ClientDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D671C8BD84D6773420AFA3BF1131496 /* ClientDelegate.m */; };
@@ -68,7 +68,7 @@
 		CB1BDF14DF0DBE1352EEC0FBF6A0605E /* ResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 12067B9DFB4E012212D91697FBFC65F9 /* ResourceLoader.m */; };
 		D2A8E56C457ED464F6269360C14AEDDC /* SINUILocalNotification+Sinch.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CCF9C946371C1B58619892FED71E0FA /* SINUILocalNotification+Sinch.h */; };
 		D301E7A4D293F0781F69CF75AC01A218 /* mute_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C97FBD7F50544701F79BBA50748093 /* mute_selected.png */; };
-		DA876B992734A1FBD7AF3307EA23C40E /* SinchCallingUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C86AC49C7E3583A3EADAE886456A4F73 /* SinchCallingUIKit.h */; };
+		DA876B992734A1FBD7AF3307EA23C40E /* SinchCallingUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C86AC49C7E3583A3EADAE886456A4F73 /* SinchCallingUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAA50867EE2B74B443AA41E18EFA94DA /* SINForwardDeclarations.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D5670064E1F37691F2F7BA37C77B7B /* SINForwardDeclarations.h */; };
 		DB2EB798B6416793E668A1DF7109E567 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0F5093D10A186AF76174341EB9F18F /* incoming.wav */; };
 		E2021EA762A9235710102BC9466FE751 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C657F0514BAA9D941F208E5AA37E5C5 /* speaker.png */; };
@@ -580,11 +580,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DDDDEA2CAE6E1CF977E0DF2463D39E /* CallScreenViewController.h in Headers */,
+				DA876B992734A1FBD7AF3307EA23C40E /* SinchCallingUIKit.h in Headers */,
 				49D46621F38A1DEBAA2DB1F45750F8E4 /* CallingManager.h in Headers */,
+				73DDDDEA2CAE6E1CF977E0DF2463D39E /* CallScreenViewController.h in Headers */,
 				A59D41BE468BA391673E9751C21E6577 /* ClientDelegate.h in Headers */,
 				77ED6F9A376354F8CE62B4BC441F3D23 /* ResourceLoader.h in Headers */,
-				DA876B992734A1FBD7AF3307EA23C40E /* SinchCallingUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

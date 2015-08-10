@@ -58,8 +58,14 @@
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [[defaults stringForKey:@"sin_lastCall"] dataUsingEncoding:NSUTF8StringEncoding];
-    id<SINCall> call = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    return call;
+    if (data != nil)
+    {
+        id<SINCall> call = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        return call;
+    }
+    return nil;
+        
+    
     
 }
 -(void)saveLastCall:(id<SINCall>)call
