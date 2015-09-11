@@ -78,6 +78,7 @@
     {
         self.answerButton.hidden = YES;
         self.hangupConstraint.constant = 0;
+            [[self audioController] startPlayingSoundFile:[self pathForSound:@"ringback.wav"] loop:YES];
     }
     else
     {
