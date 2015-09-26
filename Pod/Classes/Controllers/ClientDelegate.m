@@ -37,6 +37,8 @@
 
 -(SINLocalNotification *)client:(id<SINCallClient>)client localNotificationForIncomingCall:(id<SINCall>)call
 {
+    NSLog(@"did recieve local notification");
+    
     [[CallingManager sharedManager] saveLastCall:call];
           SINLocalNotification *notification = [[SINLocalNotification alloc] init];
         notification.alertAction = @"Answer";
