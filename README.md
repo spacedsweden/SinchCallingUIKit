@@ -12,15 +12,29 @@ This is a pod that lets you add Sinch calling functionality with a callscreens i
 ## Requirements
 
 ## Installation
-
-SinchCallingUIKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SinchCallingUIKit"
+pod 'SinchCallingUIKit',:git=>'https://github.com/spacedsweden/SinchCallingUIKit.git'
 ```
 
+## AppDelegate
+Initiate the callingmanager 
+```objectivec
+[[CallingManager sharedManager] startClientWithKey:@"key" secret:@"i/secret==" userName:userName sandbox:YES launchOptions:options];
+```
  
+ 
+ ## Make a call app to app
+ ```objectivec
+[[CallingManager sharedManager] callUser:@"usertocall"];
+```
+ ## Make a call app to phone
+ ```objectivec
+ [[CallingManager sharedManager] callNumber:@"+14154251021"];
+```
+
+
 ## Author
 
 d, christian.jensen@spaced.se
