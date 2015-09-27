@@ -81,26 +81,18 @@
 }
 -(void)callNumber:(NSString *)phoneNumber
 {
-//    if (![service isStarted])
-//    {
-//        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please start the sinch client before making a call" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-//        return;
-//    }
-    
     currentCall = [[service callClient] callPhoneNumber:phoneNumber];
     [self saveLastCall:currentCall];
     [self showCallController];
     
 }
 
-//- (SINLocalNotification *)client:(id<SINClient>)client localNotificationForIncomingCall:(id<SINCall>)call {
-//    SINLocalNotification *notification = [[SINLocalNotification alloc] init];
-//    notification.alertAction = @"Answer";
-//    notification.alertBody = [NSString stringWithFormat:@"Incoming call from %@", [call remoteUserId]];
-//    [self saveLastCall:call];
-//    return notification;
-//}
-
+-(void)callConference:(NSString *)conferenceId
+{
+    currentCall = [[service callClient] callConferenceWithId:conferenceId];
+    [self saveLastCall:currentCall];
+    [self showCallController];
+}
 
 - (void)service:(id<SINService>)service didFailWithError:(NSError *)error
 {

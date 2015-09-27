@@ -24,6 +24,6 @@
 -(void)callNumber:(NSString *)phoneNumber;
 -(void)callUser:(NSString*)userName;
 //-(void)handleLocalNotification:(UILocalNotification*)notification ;
-
+-(void)callConference:(NSString*)conferenceId;
 
 @end

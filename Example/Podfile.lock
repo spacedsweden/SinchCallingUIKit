@@ -1,11 +1,11 @@
 PODS:
-  - SinchCallingUIKit (0.1.3):
+  - SinchCallingUIKit (0.1.12):
     - SinchRTC
     - SinchService
-  - SinchRTC (3.5.2)
-  - SinchService (1.0.1):
-    - SinchService/SinchHeaders (= 1.0.1)
-  - SinchService/SinchHeaders (1.0.1)
+  - SinchRTC (3.7.1)
+  - SinchService (1.0.2):
+    - SinchService/SinchHeaders (= 1.0.2)
+  - SinchService/SinchHeaders (1.0.2)
 
 DEPENDENCIES:
   - SinchCallingUIKit (from `../`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SinchCallingUIKit: a09a9cee51ea1ed02b7e5b6ba0f5cb456819e8f2
-  SinchRTC: b5de8c84210666db5cbac256ff77953905364175
-  SinchService: 28faab418cd13734dfe5a0ef77287b25399538b2
+  SinchCallingUIKit: 11abf473029eea23236fc4f05dcd63b2c2c15eba
+  SinchRTC: 58b08d88160e514c08a1c03305728349113d5379
+  SinchService: 3af981e6b9df04345788ca40a24dcd411eeb58ea
 
 COCOAPODS: 0.38.2
