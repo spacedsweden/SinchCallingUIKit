@@ -35,11 +35,6 @@
 
 -(void)showCallController
 {
-    
-   
-    
-//    NSBundle* bundle = [NSBundle bundleWithIdentifier:@"SinchCallingUIKit"];
-    
     CallScreenViewController *vc = [[CallScreenViewController alloc] initWithNibName:@"CallScreenViewController" bundle:[ResourceLoader loadBundle]];
     currentCall.delegate = vc;
     
@@ -98,7 +93,9 @@
 {
     NSLog(@"service did fail %@", error);
 }
-
+-(void)onClientDidStart{
+    self.isStarted = YES;
+}
 - (void)service:(id<SINService>)service
      logMessage:(NSString *)message
            area:(NSString *)area
@@ -120,7 +117,8 @@
                  pushNotificationsWithEnvironment:SINAPSEnvironmentAutomatic];
     service = [SinchService serviceWithConfig:config];
     service.delegate = self;
-    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(onClientDidStart:) name:SINClientDidStartNotification object:nil];
     callClientDelegate= [[ClientDelegate alloc] init];
     service.callClient.delegate = callClientDelegate;
     [service logInUserWithId:userName];
