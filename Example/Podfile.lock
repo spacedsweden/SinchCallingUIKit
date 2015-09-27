@@ -1,5 +1,5 @@
 PODS:
-  - SinchCallingUIKit (0.1.12):
+  - SinchCallingUIKit (0.1.13):
     - SinchRTC
     - SinchService
   - SinchRTC (3.7.1)
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SinchCallingUIKit: 11abf473029eea23236fc4f05dcd63b2c2c15eba
+  SinchCallingUIKit: a20a274e718077298cb08c9f391685967bf49e1f
   SinchRTC: 58b08d88160e514c08a1c03305728349113d5379
   SinchService: 3af981e6b9df04345788ca40a24dcd411eeb58ea
 

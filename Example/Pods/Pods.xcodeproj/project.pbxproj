@@ -81,47 +81,47 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E786074393C8D9668BDC800DD529E59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE2428C920458F93EFC9AC9FC99ADFC5;
-			remoteInfo = SinchCallingUIKit;
-		};
-		431DDC6FC0356B76A47C36587146285A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FE2428C920458F93EFC9AC9FC99ADFC5;
-			remoteInfo = SinchCallingUIKit;
-		};
-		6E30C081B5F717CE4F3B4539772B5937 /* PBXContainerItemProxy */ = {
+		4CFE4FFCB8D9D875CE1D24D5AA030D45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EE1148C4208D66831D831C265C9B7E3F;
 			remoteInfo = SinchService;
 		};
-		A8A0F3A22DBAB4692F7CB57BD1C40E0B /* PBXContainerItemProxy */ = {
+		56AB0F964600B669C37AD1F7A355C3BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EE1148C4208D66831D831C265C9B7E3F;
 			remoteInfo = SinchService;
 		};
-		BAFF67D7E7A118D2D2D682BB7046C2EF /* PBXContainerItemProxy */ = {
+		5A6C032047429649A30A54F17162D741 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1148C4208D66831D831C265C9B7E3F;
+			remoteInfo = SinchService;
+		};
+		8BBAB6EE2A7E14E5AE066339253AA6FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C939F7C0900D837960B29C516DFC7C7;
 			remoteInfo = "SinchCallingUIKit-SinchCallingUIKit";
 		};
-		DB3A2D0FDBF43EA5BB1C76535BBEC280 /* PBXContainerItemProxy */ = {
+		940998999646DD64370DF9BAA79D7881 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EE1148C4208D66831D831C265C9B7E3F;
-			remoteInfo = SinchService;
+			remoteGlobalIDString = FE2428C920458F93EFC9AC9FC99ADFC5;
+			remoteInfo = SinchCallingUIKit;
+		};
+		99B774A26ABA2DCF1EEFC39C805BFAD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE2428C920458F93EFC9AC9FC99ADFC5;
+			remoteInfo = SinchCallingUIKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -618,8 +618,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				CF1A00C828C81C28E403F067C51735CD /* PBXTargetDependency */,
-				D130C6D6B51EA1938CAB814F7429B61E /* PBXTargetDependency */,
+				A04A479B909D278E0C067D65806EA864 /* PBXTargetDependency */,
+				8FBABDAE5A5314E2D41F5913B4FAC25E /* PBXTargetDependency */,
 			);
 			name = "Pods-SinchCallingUIKit_Tests";
 			productName = "Pods-SinchCallingUIKit_Tests";
@@ -636,8 +636,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				F543C92CAC3D70A41BC967D60E0E8539 /* PBXTargetDependency */,
-				FBDB2762005950F835147A0E205D1A14 /* PBXTargetDependency */,
+				DC46DAB3793264CC0150C146D0A79A82 /* PBXTargetDependency */,
+				A99AC0B6C6ABC1664E601F968302C425 /* PBXTargetDependency */,
 			);
 			name = "Pods-SinchCallingUIKit_Example";
 			productName = "Pods-SinchCallingUIKit_Example";
@@ -672,8 +672,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				3F76967BE5628A324D6C72D6A0AB96A0 /* PBXTargetDependency */,
-				8267EF6DAB687DC38535B43A018CDF82 /* PBXTargetDependency */,
+				B0FCBEDF1BE760A6467329CD38AE62CF /* PBXTargetDependency */,
+				32D2301486481D08A903F6CC951B819F /* PBXTargetDependency */,
 			);
 			name = SinchCallingUIKit;
 			productName = SinchCallingUIKit;
@@ -787,41 +787,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3F76967BE5628A324D6C72D6A0AB96A0 /* PBXTargetDependency */ = {
+		32D2301486481D08A903F6CC951B819F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SinchService;
+			target = EE1148C4208D66831D831C265C9B7E3F /* SinchService */;
+			targetProxy = 5A6C032047429649A30A54F17162D741 /* PBXContainerItemProxy */;
+		};
+		8FBABDAE5A5314E2D41F5913B4FAC25E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SinchService;
+			target = EE1148C4208D66831D831C265C9B7E3F /* SinchService */;
+			targetProxy = 56AB0F964600B669C37AD1F7A355C3BA /* PBXContainerItemProxy */;
+		};
+		A04A479B909D278E0C067D65806EA864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SinchCallingUIKit;
+			target = FE2428C920458F93EFC9AC9FC99ADFC5 /* SinchCallingUIKit */;
+			targetProxy = 99B774A26ABA2DCF1EEFC39C805BFAD0 /* PBXContainerItemProxy */;
+		};
+		A99AC0B6C6ABC1664E601F968302C425 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SinchService;
+			target = EE1148C4208D66831D831C265C9B7E3F /* SinchService */;
+			targetProxy = 4CFE4FFCB8D9D875CE1D24D5AA030D45 /* PBXContainerItemProxy */;
+		};
+		B0FCBEDF1BE760A6467329CD38AE62CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SinchCallingUIKit-SinchCallingUIKit";
 			target = 2C939F7C0900D837960B29C516DFC7C7 /* SinchCallingUIKit-SinchCallingUIKit */;
-			targetProxy = BAFF67D7E7A118D2D2D682BB7046C2EF /* PBXContainerItemProxy */;
+			targetProxy = 8BBAB6EE2A7E14E5AE066339253AA6FA /* PBXContainerItemProxy */;
 		};
-		8267EF6DAB687DC38535B43A018CDF82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SinchService;
-			target = EE1148C4208D66831D831C265C9B7E3F /* SinchService */;
-			targetProxy = A8A0F3A22DBAB4692F7CB57BD1C40E0B /* PBXContainerItemProxy */;
-		};
-		CF1A00C828C81C28E403F067C51735CD /* PBXTargetDependency */ = {
+		DC46DAB3793264CC0150C146D0A79A82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SinchCallingUIKit;
 			target = FE2428C920458F93EFC9AC9FC99ADFC5 /* SinchCallingUIKit */;
-			targetProxy = 431DDC6FC0356B76A47C36587146285A /* PBXContainerItemProxy */;
-		};
-		D130C6D6B51EA1938CAB814F7429B61E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SinchService;
-			target = EE1148C4208D66831D831C265C9B7E3F /* SinchService */;
-			targetProxy = DB3A2D0FDBF43EA5BB1C76535BBEC280 /* PBXContainerItemProxy */;
-		};
-		F543C92CAC3D70A41BC967D60E0E8539 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SinchCallingUIKit;
-			target = FE2428C920458F93EFC9AC9FC99ADFC5 /* SinchCallingUIKit */;
-			targetProxy = 1E786074393C8D9668BDC800DD529E59 /* PBXContainerItemProxy */;
-		};
-		FBDB2762005950F835147A0E205D1A14 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SinchService;
-			target = EE1148C4208D66831D831C265C9B7E3F /* SinchService */;
-			targetProxy = 6E30C081B5F717CE4F3B4539772B5937 /* PBXContainerItemProxy */;
+			targetProxy = 940998999646DD64370DF9BAA79D7881 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
