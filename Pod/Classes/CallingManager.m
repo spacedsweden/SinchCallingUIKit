@@ -109,7 +109,8 @@
 /// public Methods
 -(void)startClientWithKey:(NSString*)appKey secret:(NSString*)secret userName:(NSString*)userName sandbox:(bool)sandbox launchOptions:(NSDictionary*)launchOptions
 {
-    
+    if (self.isStarted)
+        return;
     NSString* url = sandbox ? @"sandbox.sinch.com" : @"clientapi.sinch.com";
     id config = [[SinchService configWithApplicationKey:appKey
                                       applicationSecret:secret
