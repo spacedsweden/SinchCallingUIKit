@@ -264,7 +264,7 @@ SIN_EXPORT SIN_EXTERN NSString *const SINClientWillTerminateNotification;
 - (id<SINNotificationResult>)relayRemotePushNotificationPayload:(NSString *)payload;
 
 /**
- * Method used to forward a remote notification dictionary if using -[SINCLient enableManagedPushNotifications];
+ * Method used to forward a remote notification dictionary if using -[SINClient enableManagedPushNotifications];
  *
  * @return Value indicating initial inspection of push notification.
  *
