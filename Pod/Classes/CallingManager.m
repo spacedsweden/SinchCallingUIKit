@@ -93,7 +93,7 @@
 {
     NSLog(@"service did fail %@", error);
 }
--(void)onClientDidStart{
+-(void)onClientDidStart:(id<SINClient>)client{
     self.isStarted = YES;
 }
 - (void)service:(id<SINService>)service
